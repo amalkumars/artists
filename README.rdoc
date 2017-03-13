@@ -1,0 +1,29 @@
+== README
+
+* Ruby version - 2.2.2
+
+* Ruby version - 4.2.6
+
+* System Dependencies
+  - bundle install (to install all the Gems and dependencies)
+  - rails server (to run the rails app)
+
+* Database
+  - MySQL
+
+* 3rd party Dependencies
+
+  - The app uses 3rd party LastFM API to fetch Artists and Top tracks
+  - We need to have a valid API Key from LastFM API
+
+
+* To run the test suite
+
+  - rspec . (To run all the test cases)
+  - For developing the test suite we have used following gems
+      - rspec-rails
+      - webmock (To mock the API requests)
+      - vcr (To store the responses)
+      - capybara (For feature tests)
+      - capybara-screenshot (To have screenshots when the test fails)
+
