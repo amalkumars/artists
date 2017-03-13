@@ -1,0 +1,44 @@
+<section class="content-header">
+  <div class="header-bar clearfix">
+    <i class="fa fa-bars"></i> Top 50 Tracks
+  </div>
+</section>
+
+<section class="content">
+  <div class="row">
+    <% if @tracks.present? %>
+      <div class="col-md-12">
+        <div class="box box-primary">
+          <div class="box-body">
+            <div class="table-responsive">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Play Count</th>
+                    <th>Listeners</th>
+                  </tr>
+                  <% @tracks.each_with_index do |track, i| %>
+                    <tr>
+                      <td><%= i + 1 %></td>
+                      <td><%= link_to track.name, track.url %></td>
+                      <td><%= number_to_human track.playcount %></td>
+                      <td><%= number_to_human track.listeners %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <div class="row">
+        <div class="col-md-12 text-danger text-center">
+          <%= display_error_message(@error_message) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
