@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ * require_tree . is commented
+
+ *= require_self
+ *= require AdminLTE.min
+ *= require pace
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "AdminLTE/skins/skin-blue";
+
+#error_explanation h2 {
+  font-size: 14px;
+}
+
+.lmargin-15 {
+  margin-left: 1.5%;
+}
+
+.rmargin-15 {
+  margin-right: 1.5%;
+}
+
+.tmargin-10 {
+  margin-top: 1%;
+}
+
+.search-section {
+  min-height: 0px !important;
+}
+
+.pagination a, .pagination span.current, .pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #DDD;
+  border-left-width: 0;
+}
+
+.pagination {
+  border-left: 1px solid #ddd;
+
+  .first {
+    padding : 0;
+    float: none;
+    border: none;
+  }
+
+  .prev {
+    padding : 0;
+    float: none;
+    border: none;
+  }
+
+  .page {
+    padding : 0;
+    float: none;
+    border: none;
+  }
+
+  .next {
+    padding : 0;
+    float: none;
+    border: none;
+  }
+
+  .last {
+    padding : 0;
+    float: none;
+    border: none;
+  }
+}
+
+@media (max-width: 767px) {
+  header .logo-lg img {
+    display: inline-block;
+    max-width: 155px;
+  }
+}
