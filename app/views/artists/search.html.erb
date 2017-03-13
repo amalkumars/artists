@@ -1,0 +1,41 @@
+<%= render '/artists/search_bar' %>
+
+<section class="content">
+  <% if @artists.present? %>
+    <div class="row results">
+      <% @artists.each do |artist| %>
+         <div class="col-md-4">
+          <div class="box box-widget widget-user-2">
+            <div class="widget-user-header bg-yellow">
+              <div class="widget-user-image">
+                <%= image_url(artist.image)%>
+              </div>
+              <h3 class="widget-user-username"><b><%= artist_tracks(artist) %></b></h3>
+              <h5 class="widget-user-desc">&nbsp;</h5>
+            </div>
+            <div class="box-footer no-padding">
+              <ul class="nav nav-stacked">
+                <li><a>Listeners <span class="pull-right"><%= number_to_human(artist.listeners) %></span></a></li>
+                <li><%= link_to 'Public Profile', artist.url, target: '_blank' %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="custom-pagination">
+          <span style="float: left;"><%= paginate @artists %></span>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class="row">
+      <div class="col-md-12 text-danger text-center">
+        <%= display_error_message(@error_message) %>
+      </div>
+    </div>
+  <% end %>
+</section>
