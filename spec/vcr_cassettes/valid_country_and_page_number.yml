@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ws.audioscrobbler.com/2.0/?api_key=294012135d9809c38ac3b9dfae5a17f2&country=spain&format=json&limit=5&method=geo.gettopartists&page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - ws.audioscrobbler.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty/1.9.7.3
+      Date:
+      - Sun, 12 Mar 2017 19:24:30 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '3637'
+      Connection:
+      - keep-alive
+      Access-Control-Request-Headers:
+      - Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type,
+        X-Atmosphere-Transport, *
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '86400'
+    body:
+      encoding: UTF-8
+      string: '{"topartists":{"artist":[{"name":"Tame Impala","listeners":"923993","mbid":"63aa26c3-d59b-4da4-84ac-716b54f1ef4d","url":"https://www.last.fm/music/Tame+Impala","streamable":"0","image":[{"#text":"https://lastfm-img2.akamaized.net/i/u/34s/b76c4ac1718d4f33aabbb0096a1cc67e.png","size":"small"},{"#text":"https://lastfm-img2.akamaized.net/i/u/64s/b76c4ac1718d4f33aabbb0096a1cc67e.png","size":"medium"},{"#text":"https://lastfm-img2.akamaized.net/i/u/174s/b76c4ac1718d4f33aabbb0096a1cc67e.png","size":"large"},{"#text":"https://lastfm-img2.akamaized.net/i/u/300x300/b76c4ac1718d4f33aabbb0096a1cc67e.png","size":"extralarge"},{"#text":"https://lastfm-img2.akamaized.net/i/u/b76c4ac1718d4f33aabbb0096a1cc67e.png","size":"mega"}]},{"name":"Arctic
+        Monkeys","listeners":"3288155","mbid":"ada7a83c-e3e1-40f1-93f9-3e73dbc9298a","url":"https://www.last.fm/music/Arctic+Monkeys","streamable":"0","image":[{"#text":"https://lastfm-img2.akamaized.net/i/u/34s/d570cdc318054930c93fe98e892f0052.png","size":"small"},{"#text":"https://lastfm-img2.akamaized.net/i/u/64s/d570cdc318054930c93fe98e892f0052.png","size":"medium"},{"#text":"https://lastfm-img2.akamaized.net/i/u/174s/d570cdc318054930c93fe98e892f0052.png","size":"large"},{"#text":"https://lastfm-img2.akamaized.net/i/u/300x300/d570cdc318054930c93fe98e892f0052.png","size":"extralarge"},{"#text":"https://lastfm-img2.akamaized.net/i/u/d570cdc318054930c93fe98e892f0052.png","size":"mega"}]},{"name":"The
+        Cure","listeners":"2780234","mbid":"69ee3720-a7cb-4402-b48d-a02c366f2bcf","url":"https://www.last.fm/music/The+Cure","streamable":"0","image":[{"#text":"https://lastfm-img2.akamaized.net/i/u/34s/a126a88f45e54abfca14d6150f6d694c.png","size":"small"},{"#text":"https://lastfm-img2.akamaized.net/i/u/64s/a126a88f45e54abfca14d6150f6d694c.png","size":"medium"},{"#text":"https://lastfm-img2.akamaized.net/i/u/174s/a126a88f45e54abfca14d6150f6d694c.png","size":"large"},{"#text":"https://lastfm-img2.akamaized.net/i/u/300x300/a126a88f45e54abfca14d6150f6d694c.png","size":"extralarge"},{"#text":"https://lastfm-img2.akamaized.net/i/u/a126a88f45e54abfca14d6150f6d694c.png","size":"mega"}]},{"name":"Major
+        Lazer","listeners":"1030819","mbid":"75be165a-ad83-4d12-bd28-f589a15c479f","url":"https://www.last.fm/music/Major+Lazer","streamable":"0","image":[{"#text":"https://lastfm-img2.akamaized.net/i/u/34s/2ef42dd356169dee318e0ce819769b55.png","size":"small"},{"#text":"https://lastfm-img2.akamaized.net/i/u/64s/2ef42dd356169dee318e0ce819769b55.png","size":"medium"},{"#text":"https://lastfm-img2.akamaized.net/i/u/174s/2ef42dd356169dee318e0ce819769b55.png","size":"large"},{"#text":"https://lastfm-img2.akamaized.net/i/u/300x300/2ef42dd356169dee318e0ce819769b55.png","size":"extralarge"},{"#text":"https://lastfm-img2.akamaized.net/i/u/2ef42dd356169dee318e0ce819769b55.png","size":"mega"}]},{"name":"Red
+        Hot Chili Peppers","listeners":"4424891","mbid":"8bfac288-ccc5-448d-9573-c33ea2aa5c30","url":"https://www.last.fm/music/Red+Hot+Chili+Peppers","streamable":"0","image":[{"#text":"https://lastfm-img2.akamaized.net/i/u/34s/13c90c61d0bc47fd9f391831552a94b2.png","size":"small"},{"#text":"https://lastfm-img2.akamaized.net/i/u/64s/13c90c61d0bc47fd9f391831552a94b2.png","size":"medium"},{"#text":"https://lastfm-img2.akamaized.net/i/u/174s/13c90c61d0bc47fd9f391831552a94b2.png","size":"large"},{"#text":"https://lastfm-img2.akamaized.net/i/u/300x300/13c90c61d0bc47fd9f391831552a94b2.png","size":"extralarge"},{"#text":"https://lastfm-img2.akamaized.net/i/u/13c90c61d0bc47fd9f391831552a94b2.png","size":"mega"}]}],"@attr":{"country":"Spain","page":"3","perPage":"5","totalPages":"90525","total":"452625"}}}'
+    http_version: 
+  recorded_at: Sun, 12 Mar 2017 19:24:30 GMT
+recorded_with: VCR 3.0.3

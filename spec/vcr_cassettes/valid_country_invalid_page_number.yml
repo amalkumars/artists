@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ws.audioscrobbler.com/2.0/?api_key=294012135d9809c38ac3b9dfae5a17f2&country=spain&format=json&limit=5&method=geo.gettopartists&page=6666666
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - ws.audioscrobbler.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty/1.9.7.3
+      Date:
+      - Sun, 12 Mar 2017 19:24:31 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '71'
+      Connection:
+      - keep-alive
+      Access-Control-Request-Headers:
+      - Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type,
+        X-Atmosphere-Transport, *
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '86400'
+    body:
+      encoding: UTF-8
+      string: '{"error":6,"message":"page param out of bounds (1-1000000)","links":[]}'
+    http_version: 
+  recorded_at: Sun, 12 Mar 2017 19:24:31 GMT
+recorded_with: VCR 3.0.3
