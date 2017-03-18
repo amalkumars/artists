@@ -19,8 +19,7 @@ module Lastfm
     # Gets the response in json format
     # A new output hash is build and returned based on the json response
     # => E.g { artists: [{..}], page: 1, total: 'total records in LastFM DB'}
-    # Method retuns nil
-    # => in case of API Exception and topartists key is not found in the reponse
+    # In case of API Exception the method returns error response
     def find
       service = HttpService.new
       resp = service.http_get(@url)
@@ -38,6 +37,9 @@ module Lastfm
       service.location_search_api(@country, @page, @limit)
     end
 
+    # This method builds the artists response.
+    # Sample Structure
+    # => { artists: [{ array of hash}], page: 'current page', total: 'total records'}
     def build_artists_response(resp)
       artists = []
       resp['topartists']['artist'].each do |artist|

@@ -10,6 +10,11 @@ module Lastfm
       @url = api_url
     end
 
+    # This methods triggers the API call to LastFmServer using HttpService (GET)
+    # Gets the response in json format
+    # A new output hash is build and returned based on the json response
+    # => E.g { tracks: [{..}]} - Top tracks of an artist
+    # In case of API Exception the method returns error response
     def find
       service = HttpService.new
       resp = service.http_get(@url)
