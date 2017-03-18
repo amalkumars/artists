@@ -92,5 +92,16 @@ describe Lastfm::ArtistLocationSearchService do
                                         message: 'Invalid API key - You must be granted a valid key by last.fm')
       end
     end
+
+    it 'invalid artist search method' do
+      # when lastFm artists search api method name is invalid it is expected to return
+      # => Invalid Method - No method with that name in this package message
+      VCR.use_cassette('artist_search_with_invalid_method') do
+        stub_const("FM_LOCATION_SEARCH_PATH", '/2.0/?method=geko.gettopartists')
+        subject = described_class.new('spain')
+        response = subject.find
+        expect(response).to include(error: 3, message: 'Invalid Method - No method with that name in this package')
+      end
+    end
   end
 end
