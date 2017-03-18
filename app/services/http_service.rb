@@ -16,6 +16,6 @@ class HttpService
   private
 
   def invalid_request
-    { message: 'Invalid Request', error: 1 }
+    { 'message' => 'Invalid Request', 'error' => 1 }
   end
 end
