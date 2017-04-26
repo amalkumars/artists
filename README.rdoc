@@ -27,3 +27,8 @@
       - capybara (For feature tests)
       - capybara-screenshot (To have screenshots when the test fails)
 
+ * Task
+  
+   - User can enter a keyword (country name), which is then used to search Lastfm via their REST API
+   - The results should be paginated and displayed as five per page, and the user can navigate to other pages
+   - User can select an artist and get his top 50 tracks displayed.
